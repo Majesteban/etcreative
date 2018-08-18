@@ -1,0 +1,42 @@
+# -----------------------------------------------------------------
+# .gitignore for ETCreative
+#
+# The approach is to ignore everything, and explicitly define what
+# will be tracked. It is assumed that we will never touch wordpress
+# core and that `npm run dev` will compile our theme files in the
+# wordpress directory.
+#
+# -----------------------------------------------------------------
+
+# Ignore all files starting with .
+.*
+
+# Ignore all files starting with ~
+~*
+
+# Ignore everything in the root except .gitignore, project config,
+# the readme, and your theme directory.
+/*
+!.gitignore
+!package.json
+!webpack.config.js
+!webpack-configs/
+!webpack-configs/*
+!README.md
+!/wordpress
+
+# Specify your project theme source file here:
+!Pixelated
+
+# Ignore any images directory, too big for git repo
+**/images/
+
+# Ignore everything in the "wordpress" directory (which is built
+# from the project source with `npm run dev`).
+/wordpress/*
+
+
+# Track .htaccess file
+!/wordpress/.htaccess
+
+#Ignore Project Notes
